@@ -1,0 +1,14 @@
+emsdk
+**/*.html
+**/*.js
+**/*.wasm
+
+# Exclude sources which should be tracked but were ignored by above rules
+!Part-1/02-CustomHTML/index.html
+!Part-1/03-WebAssemblyImportExport/simple.js
+!Part-1/04-Memory/*.html
+!Part-1/05-Table/*.html
+!Part-1/06-Global/*.html
+!Part-1/07-Env/*.html
+!Part-2/Exercises/02-FileViewer/**/*.html
+!Part-2/Exercises/02-FileViewer/**/*.js
