@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Custom HTML</title>
+</head>
+<body>
+    <table id="fibTable" border="1">
+        <thead>
+            <tr><th>n</th><th>fibonacci(n)</th></tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var Module = {
+            onRuntimeInitialized() {
+                const tbody = document.querySelector('#fibTable tbody');
+                for (let i = 0; i < 20; i++) {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `<td>${i}</td><td>${Module._fibonacci(i)}</td>`;
+                    tbody.appendChild(row);
+                }
+            }
+        };
+    </script>
+    <script src="fibonacci.js"></script>
+</body>
+</html>
